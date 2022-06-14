@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Compile Remove="CreateCustomerTests.cs" />
+    <Compile Remove="MockCustomerRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,12 +19,6 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
     <PackageReference Include="Shouldly" Version="4.0.3" />
     <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Mc2.CrudTest.Presentation\Domain\Mc2.CrudTest.Presentation.Domain.csproj" />
-    <ProjectReference Include="..\Mc2.CrudTest.Presentation\Infrastructure\Mc2.CrudTest.Presentation.Infrastructure.csproj" />
-    <ProjectReference Include="..\Mc2.CrudTest.Presentation\Server\Mc2.CrudTest.Presentation.Server.csproj" />
   </ItemGroup>
 
 </Project>

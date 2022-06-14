@@ -1,18 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.0.3" />
     <PackageReference Include="libphonenumber-csharp" Version="8.12.50" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
-  </ItemGroup>
-
-  <ItemGroup>
-	  <ProjectReference Include="..\Infrastructure\Mc2.CrudTest.Presentation.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
