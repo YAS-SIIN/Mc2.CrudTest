@@ -1,10 +1,14 @@
 
 
+using Mc2.CrudTest.Application.CommandHandler;
+using Mc2.CrudTest.Application.Commands;
 using Mc2.CrudTest.Presentation.Domain.Entities;
 using Mc2.CrudTest.Presentation.Infrastructure.Context;
 using Mc2.CrudTest.Presentation.Infrastructure.GenericRepository;
 using Mc2.CrudTest.Presentation.Infrastructure.Services;
 using Mc2.CrudTest.Presentation.Infrastructure.UnitOfWork;
+
+using MediatR;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +17,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+
+using System.Collections.Generic;
 
 namespace Mc2.CrudTest.Presentation.Server
 {
@@ -55,9 +61,14 @@ namespace Mc2.CrudTest.Presentation.Server
 
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IGenericRepository<Customer>, GenericRepository<Customer>>();     
-
-            services.AddScoped<ICustomerService, CustomerService>();  
+            services.AddScoped<IGenericRepository<Customer>, GenericRepository<Customer>>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddTransient<IRequestHandler<AddCustomerCommand, bool>, AddCustomerHandler>();
+            services.AddTransient<IRequestHandler<DeleteCustomerCommand, bool>, DeleteCustomerHandler>();
+            services.AddTransient<IRequestHandler<UpdateCustomerCommand, bool>, UpdateCustomerHandler>();
+            services.AddTransient<IRequestHandler< GetAllCustomerQuery , List<Customer>>, GetAllCustomerQueryHandler>();
+            services.AddTransient<IRequestHandler<GetCustomerByIdQuery, Customer>, GetCustomerByIdHandler>();
+  
                                                 
             services.AddMemoryCache();
         }

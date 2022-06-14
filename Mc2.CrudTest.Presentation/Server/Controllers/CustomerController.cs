@@ -1,68 +1,58 @@
 ﻿using CleanArchitecture.Domain.Common;
 
+using Mc2.CrudTest.Application.Commands;
 using Mc2.CrudTest.Presentation.Domain.Entities;
 using Mc2.CrudTest.Presentation.Infrastructure.Services;
- 
+
+using MediatR;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Mc2.CrudTest.Presentation.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
-    {                                                         
-        private readonly ICustomerService _customerservice;
-        public CustomerController( ICustomerService customerservice)
-        {
-            _customerservice = customerservice;
-        }
+    {
+        private IMediator _mediator;
 
-        [HttpGet]
+        protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
+                
+        [HttpGet, Route("[action]")]
         public IEnumerable<Customer> Get()
-        {                  
-            return _customerservice.GetAll();
-        }
-
-        [HttpGet]
-        public Customer GetById(int Id)
         {
-            return _customerservice.GetById(Id);
+            var aa = (IEnumerable<Customer>)Mediator.Send(new GetAllCustomerQuery());
+            return (IEnumerable<Customer>)Mediator.Send(new GetAllCustomerQuery());
         }
 
-        [HttpPost]
-        public bool Post([FromBody] Customer Customer)
-        {                       
-            if (!Customer.PhoneNumber.IsValidPhone())
-                return false;
-            if (!Customer.BankAccountNumber.IsValidBankAccountNumber())
-                return false;
-
-            _customerservice.Insert(Customer);
-            return true;
-        }
-
-        [HttpPut]
-        public bool Put([FromBody] Customer Customer)
+        [HttpGet, Route("[action]")]
+        public Customer GetById(int CustomerId)
         {
-            if (!Customer.PhoneNumber.IsValidPhone())
-                return false;
-            if (!Customer.BankAccountNumber.IsValidBankAccountNumber())
-                return false;
-
-            _customerservice.Update(Customer);
-            return true;
+            return (Customer)Mediator.Send(new GetCustomerByIdQuery { Id= CustomerId });
         }
 
-        [HttpDelete]
-        public bool Delete(int Id)
+        [HttpPost, Route("[action]")]
+        public Task<bool> Post([FromBody] AddCustomerCommand Customer)
         {
-          var customer =  _customerservice.GetById(Id);
-              _customerservice.Delete(customer);
-            return true;
+            return Mediator.Send(Customer);        
+        }
+
+        [HttpPut, Route("[action]")]
+        public Task<bool> Put([FromBody] UpdateCustomerCommand Customer)
+        {
+            return Mediator.Send(Customer);    
+        }
+
+        [HttpDelete, Route("[action]")]
+        public Task<bool> Delete(int CustomerId)
+        {                                                      
+            return Mediator.Send(new DeleteCustomerCommand { Id = CustomerId });    
         }
     }
 }

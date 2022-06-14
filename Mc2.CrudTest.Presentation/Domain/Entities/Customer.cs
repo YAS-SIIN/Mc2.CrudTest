@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace Mc2.CrudTest.Presentation.Domain.Entities
 {
@@ -21,8 +22,8 @@ namespace Mc2.CrudTest.Presentation.Domain.Entities
         public DateTime DateOfBirth { get; set; }
 
         [Required]
-        [StringLength(15)]                           
-        public string PhoneNumber { get; set; }
+        [StringLength(15)]                                       
+        public ulong PhoneNumber { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -32,5 +33,10 @@ namespace Mc2.CrudTest.Presentation.Domain.Entities
         [Required]
         [StringLength(100)]
         public string BankAccountNumber { get; set; }
+
+        public static explicit operator Customer(Task<Customer> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

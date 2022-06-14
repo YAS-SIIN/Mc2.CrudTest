@@ -8,13 +8,13 @@ namespace CleanArchitecture.Domain.Common
 public static class ValidationCheck
 {
  
-    public static bool IsValidPhone(this string phoneNumber)
+    public static bool IsValidPhone(this ulong phoneNumber)
     {
 
         PhoneNumberUtil pnuCheck = PhoneNumberUtil.GetInstance();
         try
         {
-            PhoneNumber numberProto = pnuCheck.Parse(phoneNumber, "IR");
+            PhoneNumber numberProto = pnuCheck.Parse(phoneNumber.ToString(), "IR");
             bool validate = pnuCheck.IsValidNumber(numberProto);
            
             return validate;
