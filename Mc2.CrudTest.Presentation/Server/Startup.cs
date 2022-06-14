@@ -1,7 +1,7 @@
 
 
-using Mc2.CrudTest.Application.CommandHandler;
-using Mc2.CrudTest.Application.Commands;
+using Mc2.CrudTest.Presentation.Application.CommandHandler;
+using Mc2.CrudTest.Presentation.Application.Commands;
 using Mc2.CrudTest.Presentation.Domain.Entities;
 using Mc2.CrudTest.Presentation.Infrastructure.Context;
 using Mc2.CrudTest.Presentation.Infrastructure.GenericRepository;

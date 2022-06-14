@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Mc2.CrudTest.Presentation.Domain.csproj" />     
+    <ProjectReference Include="..\Domain\Mc2.CrudTest.Presentation.Domain.csproj" />
   </ItemGroup>
 
 </Project>

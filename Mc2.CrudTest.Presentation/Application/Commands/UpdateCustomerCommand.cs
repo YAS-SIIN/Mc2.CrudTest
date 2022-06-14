@@ -3,7 +3,7 @@ using Mc2.CrudTest.Presentation.Domain.Dto;
 
 using MediatR;
 
-namespace Mc2.CrudTest.Application.Commands
+namespace Mc2.CrudTest.Presentation.Application.Commands
 {
     public class UpdateCustomerCommand : IRequest<bool>
     {

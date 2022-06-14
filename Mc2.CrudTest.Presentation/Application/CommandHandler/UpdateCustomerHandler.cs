@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Common;
+﻿using Mc2.CrudTest.Presentation.Domain.Common;
 
-using Mc2.CrudTest.Application.Commands;
+using Mc2.CrudTest.Presentation.Application.Commands;
 using Mc2.CrudTest.Presentation.Domain.Entities;
 using Mc2.CrudTest.Presentation.Infrastructure.Services;
 
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 
 
-namespace Mc2.CrudTest.Application.CommandHandler
+namespace Mc2.CrudTest.Presentation.Application.CommandHandler
 {
     public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, bool>
     {

@@ -19,7 +19,7 @@ namespace Mc2.CrudTest.Presentation.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Mc2.CrudTest.Presentation.Models.Customer", b =>
+            modelBuilder.Entity("Mc2.CrudTest.Presentation.Domain.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

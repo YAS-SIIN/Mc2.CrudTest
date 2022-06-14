@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.DependencyInjection;
 using PhoneNumbers;
 
-namespace CleanArchitecture.Domain.Common
+namespace Mc2.CrudTest.Presentation.Domain.Common
 {     
 public static class ValidationCheck
 {
