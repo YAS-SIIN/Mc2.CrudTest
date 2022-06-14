@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.Presentation.Models;
+﻿using Mc2.CrudTest.Presentation.Domain.Entities;
+using Mc2.CrudTest.Presentation.Infrastructure.Services;
 using Mc2.CrudTest.Presentation.Server.Controllers;
-using Mc2.CrudTest.Presentation.Service;
-
+ 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Moq;

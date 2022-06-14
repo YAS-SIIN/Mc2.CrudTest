@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Mc2.CrudTest.Presentation.Entities.Context;
-using Mc2.CrudTest.Presentation.Entities.GenericRepository; 
-namespace Mc2.CrudTest.Presentation.Entities.UnitOfWork
+using Mc2.CrudTest.Presentation.Infrastructure.Context;
+using Mc2.CrudTest.Presentation.Infrastructure.GenericRepository; 
+namespace Mc2.CrudTest.Presentation.Infrastructure.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {

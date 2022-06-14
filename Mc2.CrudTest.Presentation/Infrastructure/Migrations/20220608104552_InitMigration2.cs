@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Mc2.CrudTest.Presentation.Entities.Migrations
+namespace Mc2.CrudTest.Presentation.Infrastructure.Migrations
 {
     public partial class InitMigration2 : Migration
     {

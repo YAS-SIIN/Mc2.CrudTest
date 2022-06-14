@@ -1,6 +1,6 @@
-﻿using Mc2.CrudTest.Presentation.Models;
-using Mc2.CrudTest.Presentation.Service;
-
+﻿using Mc2.CrudTest.Presentation.Domain.Entities;
+using Mc2.CrudTest.Presentation.Infrastructure.Services;
+ 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

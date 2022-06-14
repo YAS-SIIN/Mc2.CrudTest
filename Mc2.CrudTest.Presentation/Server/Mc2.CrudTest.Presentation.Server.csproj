@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Service\Mc2.CrudTest.Presentation.Service.csproj" />
+    <ProjectReference Include="..\Infrastructure\Mc2.CrudTest.Presentation.Infrastructure.csproj" />
     <ProjectReference Include="..\Shared\Mc2.CrudTest.Shared.csproj" />
     <ProjectReference Include="..\Front\Mc2.CrudTest.Presentation.Front.csproj" />
   </ItemGroup>

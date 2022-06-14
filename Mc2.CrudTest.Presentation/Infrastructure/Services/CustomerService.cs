@@ -1,13 +1,14 @@
-﻿using Mc2.CrudTest.Presentation.Entities.UnitOfWork;
-using Mc2.CrudTest.Presentation.Models;
+﻿using Mc2.CrudTest.Presentation.Infrastructure.UnitOfWork;
+using Mc2.CrudTest.Presentation.Domain;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mc2.CrudTest.Presentation.Domain.Entities;
 
-namespace Mc2.CrudTest.Presentation.Service
+namespace Mc2.CrudTest.Presentation.Infrastructure.Services
 {
   public class CustomerService:ICustomerService
     { 

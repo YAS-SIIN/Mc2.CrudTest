@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-using Mc2.CrudTest.Presentation.Models;
+using Mc2.CrudTest.Presentation.Domain.Entities;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace Mc2.CrudTest.Presentation.Entities.Context
+namespace Mc2.CrudTest.Presentation.Infrastructure.Context
 {
 
     public class MyDataBase : DbContext

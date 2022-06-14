@@ -1,4 +1,4 @@
-﻿using Mc2.CrudTest.Presentation.Entities.Context;
+﻿using Mc2.CrudTest.Presentation.Infrastructure.Context;
 
 using Microsoft.EntityFrameworkCore;
  
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mc2.CrudTest.Presentation.Entities.GenericRepository
+namespace Mc2.CrudTest.Presentation.Infrastructure.GenericRepository
 {
  
     public class GenericRepository<T> : IGenericRepository<T> where T : class

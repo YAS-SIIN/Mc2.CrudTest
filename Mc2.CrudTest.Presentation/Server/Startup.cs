@@ -1,8 +1,10 @@
-using Mc2.CrudTest.Presentation.Entities.Context;
-using Mc2.CrudTest.Presentation.Entities.GenericRepository;
-using Mc2.CrudTest.Presentation.Entities.UnitOfWork;
-using Mc2.CrudTest.Presentation.Models;
-using Mc2.CrudTest.Presentation.Service;
+
+
+using Mc2.CrudTest.Presentation.Domain.Entities;
+using Mc2.CrudTest.Presentation.Infrastructure.Context;
+using Mc2.CrudTest.Presentation.Infrastructure.GenericRepository;
+using Mc2.CrudTest.Presentation.Infrastructure.Services;
+using Mc2.CrudTest.Presentation.Infrastructure.UnitOfWork;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

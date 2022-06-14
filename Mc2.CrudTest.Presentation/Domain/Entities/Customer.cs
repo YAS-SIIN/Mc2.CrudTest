@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Mc2.CrudTest.Presentation.Models
+namespace Mc2.CrudTest.Presentation.Domain.Entities
 {
     public class Customer : BaseEntity<int>
     {                                

@@ -11,11 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Shared", "Mc2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Server", "Mc2.CrudTest.Presentation\Server\Mc2.CrudTest.Presentation.Server.csproj", "{8D41010B-AEF1-4742-B7EC-6A5AE62C45FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Entities", "Mc2.CrudTest.Presentation\Entities\Mc2.CrudTest.Presentation.Entities.csproj", "{229ED94F-537F-4B10-8BB1-96D56CA25097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Infrastructure", "Mc2.CrudTest.Presentation\Infrastructure\Mc2.CrudTest.Presentation.Infrastructure.csproj", "{229ED94F-537F-4B10-8BB1-96D56CA25097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Models", "Mc2.CrudTest.Presentation\Models\Mc2.CrudTest.Presentation.Models.csproj", "{01FA3144-D659-4C4B-9DA7-63965A48C25F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Service", "Mc2.CrudTest.Presentation\Service\Mc2.CrudTest.Presentation.Service.csproj", "{EC093B51-39FB-4AE5-88E6-AC27CE72A6B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Domain", "Mc2.CrudTest.Presentation\Domain\Mc2.CrudTest.Presentation.Domain.csproj", "{01FA3144-D659-4C4B-9DA7-63965A48C25F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{01FA3144-D659-4C4B-9DA7-63965A48C25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01FA3144-D659-4C4B-9DA7-63965A48C25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01FA3144-D659-4C4B-9DA7-63965A48C25F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC093B51-39FB-4AE5-88E6-AC27CE72A6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC093B51-39FB-4AE5-88E6-AC27CE72A6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC093B51-39FB-4AE5-88E6-AC27CE72A6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC093B51-39FB-4AE5-88E6-AC27CE72A6B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

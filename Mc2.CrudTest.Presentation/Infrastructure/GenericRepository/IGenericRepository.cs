@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mc2.CrudTest.Presentation.Entities.GenericRepository
+namespace Mc2.CrudTest.Presentation.Infrastructure.GenericRepository
 {
     public interface IGenericRepository<T> where T : class
     {

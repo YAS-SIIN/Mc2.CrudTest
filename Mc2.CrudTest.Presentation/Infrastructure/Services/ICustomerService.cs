@@ -1,4 +1,5 @@
-﻿using Mc2.CrudTest.Presentation.Models;
+﻿using Mc2.CrudTest.Presentation.Domain.Entities;
+ 
 
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mc2.CrudTest.Presentation.Service
+namespace Mc2.CrudTest.Presentation.Infrastructure.Services
 {
    public interface ICustomerService
     {

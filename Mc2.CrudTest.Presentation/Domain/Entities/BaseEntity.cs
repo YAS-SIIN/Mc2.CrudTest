@@ -4,7 +4,7 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace Mc2.CrudTest.Presentation.Models
+namespace Mc2.CrudTest.Presentation.Domain.Entities
 {
     public interface IEntity
     {                                     
