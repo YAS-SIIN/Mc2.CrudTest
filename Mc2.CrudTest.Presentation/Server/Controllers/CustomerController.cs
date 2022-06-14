@@ -1,4 +1,6 @@
-﻿using Mc2.CrudTest.Presentation.Domain.Entities;
+﻿using CleanArchitecture.Domain.Common;
+
+using Mc2.CrudTest.Presentation.Domain.Entities;
 using Mc2.CrudTest.Presentation.Infrastructure.Services;
  
 using Microsoft.AspNetCore.Http;
@@ -32,22 +34,35 @@ namespace Mc2.CrudTest.Presentation.Server.Controllers
         }
 
         [HttpPost]
-        public Customer Post([FromBody] Customer Customer)
-        {                                 
-            return _customerservice.Insert(Customer);
+        public bool Post([FromBody] Customer Customer)
+        {                       
+            if (!Customer.PhoneNumber.IsValidPhone())
+                return false;
+            if (!Customer.BankAccountNumber.IsValidBankAccountNumber())
+                return false;
+
+            _customerservice.Insert(Customer);
+            return true;
         }
 
         [HttpPut]
-        public Customer Put([FromBody] Customer Customer)
-        {           
-            return _customerservice.Update(Customer);
+        public bool Put([FromBody] Customer Customer)
+        {
+            if (!Customer.PhoneNumber.IsValidPhone())
+                return false;
+            if (!Customer.BankAccountNumber.IsValidBankAccountNumber())
+                return false;
+
+            _customerservice.Update(Customer);
+            return true;
         }
 
         [HttpDelete]
-        public Customer Delete(int Id)
+        public bool Delete(int Id)
         {
           var customer =  _customerservice.GetById(Id);
-            return _customerservice.Delete(customer);
+              _customerservice.Delete(customer);
+            return true;
         }
     }
 }

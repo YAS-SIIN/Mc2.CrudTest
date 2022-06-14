@@ -21,8 +21,7 @@ namespace Mc2.CrudTest.Presentation.Domain.Entities
         public DateTime DateOfBirth { get; set; }
 
         [Required]
-        [StringLength(15)]                      
-        [RegularExpression("^[0][9][0-9][0-9]{8,8}$")]
+        [StringLength(15)]                           
         public string PhoneNumber { get; set; }
 
         [Required]

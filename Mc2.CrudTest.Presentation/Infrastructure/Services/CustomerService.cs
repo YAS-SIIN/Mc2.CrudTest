@@ -29,8 +29,7 @@ namespace Mc2.CrudTest.Presentation.Infrastructure.Services
         }
 
         public Customer Insert(Customer ObjCustomer)
-        {
-
+        {     
             _uw.GetRepository<Customer>().Add(ObjCustomer);
             _uw.SaveChanges();
             return ObjCustomer;
