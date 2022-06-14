@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Domain", "Mc2.CrudTest.Presentation\Domain\Mc2.CrudTest.Presentation.Domain.csproj", "{01FA3144-D659-4C4B-9DA7-63965A48C25F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Application", "Mc2.CrudTest.Presentation\Mc2.CrudTest.Application\Mc2.CrudTest.Application.csproj", "{C084022F-65D1-420C-82EF-1ABA978B843E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Application", "Mc2.CrudTest.Presentation\Application\Mc2.CrudTest.Application.csproj", "{C084022F-65D1-420C-82EF-1ABA978B843E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
